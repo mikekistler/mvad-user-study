@@ -18,7 +18,7 @@ Imagine 20 sensors from an auto engine generating 20 different signals like rota
 
 There are three processes to use Multivariate Anomaly Detection.
 
-- Training: Use Train Model API to create and train a model, then use Get Model Status API to get the status and   model metadata.
+- Training: Use Train Model API to create and train a model, then use Get Model Status API to get the status and model metadata.
 - Inference: Use Async Inference API to trigger an asynchronous inference process and use Get Inference results API to get detection results on a batch of data. You could also use Sync Inference API to trigger a detection on one timestamp every time.
 - Other operations: List Model API and Delete Model API are supported in Multivariate Anomaly Detection model for model management.
 

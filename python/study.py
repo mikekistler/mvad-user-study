@@ -54,7 +54,6 @@ print(f'Number of ready models is {count}')
 # contains a time-stamp and then the values of the five sensor readings.
 # The data contains data points for the period 2021-01-02T09:20:00Z to 2021-01-03T01:59:00Z.
 # The data is located at https://userstudystorageaccount.blob.core.windows.net/mvad-user-study/sensors.csv
-# The URL for the data and start/end time values have been provided.
 
 def task4(model_id: str) -> int:
     # Code goes here
