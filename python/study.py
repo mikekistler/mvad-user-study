@@ -4,9 +4,9 @@ import dateparser
 import os
 import time
 
-import azure.ai.anomalydetector as ad
+from azure.ai.anomalydetector import *
 from azure.ai.anomalydetector.models import *
-from azure.core.credentials import AzureKeyCredential
+from azure.core.credentials import *
 
 # An instance of the Anomaly Detector service has already been provisioned for you.
 
@@ -34,18 +34,17 @@ def task2() -> AnomalyDetectionModel:
     # Code goes here
     return None
 
-model = task2()
+#task2()
 
 # Task 3:
-# Write a function to retrieve all the models and count the ones that are ready to use.
-# Return the number of models that are ready to use.
-
-def task3() -> int:
+# Write a function to print the number of multivariate models in the service that are ready to use
+# and return the modelId of the model that you created in task2.
+def task3() -> str:
     # Code goes here
     return None
 
-count = task3()
-print(f'Number of ready models is {count}')
+# model_id = task3()
+# print(f'model_id is {model_id}')
 
 # Task 4:
 # Write a function to perform a bulk analysis of multivariate sensor data and return
@@ -59,8 +58,8 @@ def task4(model_id: str) -> int:
     # Code goes here
     return None
 
-count = task4(model.model_id)
-print(f'Number of anomalies detected is {count}')
+# count = task4(model_id)
+# print(f'Number of anomalies detected is {count}')
 
 # Task 5:
 # Write a function to perform a bulk analysis of multivariate sensor data for a data set we provide.
@@ -75,5 +74,5 @@ def task5(model_id: str) -> int | str:
     # Code goes here
     return None
 
-message = task5(model.model_id)
-print(message)
+# message = task5(model_id)
+# print(message)
