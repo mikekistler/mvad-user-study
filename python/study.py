@@ -9,7 +9,8 @@ from azure.ai.anomalydetector.models import *
 from azure.core.credentials import *
 
 # An instance of the Anomaly Detector service has already been provisioned for you.
-
+endpoint = os.environ["ANOMALY_DETECTOR_ENDPOINT"]
+key = os.environ["ANOMALY_DETECTOR_APIKEY"]
 
 # Task 1:
 # Write a function to print the number of multivariate models in the service.
