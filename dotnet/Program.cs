@@ -10,7 +10,7 @@ string _endpoint = Environment.GetEnvironmentVariable("ANOMALY_DETECTOR_ENDPOINT
 
 #region TASK 1
 /*
- * Create an Anomaly Detector client object that authenticates to Azure Active Directory.
+ * Create an Anomaly Detector client object that authenticates with an API key.
  * The endpoint and API key to use are stored in the _apiKey and _endpoint variables.
  */
 // CODE FOR TASK 1 GOES HERE
@@ -36,11 +36,11 @@ void Task2()
 #region TASK 3
 /*
  * Create and train a multivariate anomaly detector model.
- * The training data is a sequence of timestamped sensor readings from 5 sensors.
- * The data is stored as comma-separated values in a single table, where each line
- * contains a timestamp and then the values of the 5 sensor readings.
+ * The training data is located at https://multivariateuserstudy.blob.core.windows.net/anomalydetectordata/training_data.csv
+ * The training data is a sequence of timestamped sensor readings from 5 sensors
+ * stored as comma-separated values in a single table, where each line
+ * contains a timestamp and the values of the 5 sensor readings.
  * The data contains data points for the period 2021-01-01T00:00:00Z to 2021-01-02T09:19:00Z.
- * The data is located at https://multivariateuserstudy.blob.core.windows.net/anomalydetectordata/training_data.csv
  * Return the model object when it's ready for use.
  * If the training failed, return null.
  */
@@ -65,12 +65,12 @@ string Task4()
 
 #region TASK 5
 /*
- * Perform a bulk analysis of multivariate sensor data.
- * Return a count of the number of anomalies detected.
+ * Perform a bulk analysis of multivariate sensor data using the model you created in Task 3.
+ * The data is located at https://multivariateuserstudy.blob.core.windows.net/anomalydetectordata/sensors.csv
  * The data is stored as comma-separated values in a single table, where each line
  * contains a timestamp and the values of the 5 sensor readings.
  * The data contains data points for the period 2021-01-02T14:20:00Z to 2021-01-03T01:59:00Z.
- * The data is located at https://multivariateuserstudy.blob.core.windows.net/anomalydetectordata/sensors.csv
+ * Return the number of anomalies detected.
  */
 int? Task5(string modelId)
 {
@@ -81,13 +81,13 @@ int? Task5(string modelId)
 
 #region TASK 6
 /*
- * Perform a bulk analysis of multivariate sensor data for a data set we provide.
- * There's a problem with the data that will cause the analysis to fail. You should add error handling
- * logic to your function to catch the error and return an English description of the error.
+ * Perform a bulk analysis of multivariate sensor data using the model you created in Task 3.
+ * The data is located at https://multivariateuserstudy.blob.core.windows.net/anomalydetectordata/sensors2.csv
  * The data is stored as comma-separated values in a single table, where each line
  * contains a timestamp and the values of the 5 sensor readings.
  * The data contains data points for the period 2021-01-02T09:20:00Z to 2021-01-02T12:38:00Z.
- * The data is located at https://multivariateuserstudy.blob.core.windows.net/anomalydetectordata/sensors2.csv
+ * There's a problem with the data that will cause the analysis to fail. You should add error handling
+ * logic to your function to catch the error and return an English description of the error.
  */
 void Task6(string modelId)
 {
