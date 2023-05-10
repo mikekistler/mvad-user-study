@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Azure.AI.AnomalyDetector" Version="3.0.0-alpha.20230508.2" />
+    <PackageReference Include="Azure.AI.AnomalyDetector" Version="3.0.0-alpha.20230509.3" />
   </ItemGroup>
 
 </Project>
