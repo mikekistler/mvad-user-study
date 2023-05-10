@@ -9,11 +9,13 @@ string _apiKey = Environment.GetEnvironmentVariable("ANOMALY_DETECTOR_APIKEY");
 string _endpoint = Environment.GetEnvironmentVariable("ANOMALY_DETECTOR_ENDPOINT");
 
 Task1();
-//var model = Task2();
-//var modelId = Task3();
+// var model = Task2();
+// var modelId = model.ModelId;
+// Console.WriteLine($"Trained modelId: {modelId}");
+// Task3();
 // int? numAnomalies = Task4(modelId);
 // Console.WriteLine($"Number of anomalies detected: {numAnomalies}");
-//Task5(modelId);
+// Task5(modelId);
 
 #region TASK 1
 /*
@@ -39,15 +41,15 @@ void Task1()
 AnomalyDetectionModel Task2()
 {
     // CODE FOR TASK 2 GOES HERE
+    return null;
 }
 #endregion
 
 #region TASK 3
 /*
  * Print the number of multivariate models in the service that are ready to use.
- * Return the model ID of the model that you created in Task 3.
  */
-string Task3()
+void Task3()
 {
     // CODE FOR TASK 3 GOES HERE
 }
@@ -55,7 +57,7 @@ string Task3()
 
 #region TASK 4
 /*
- * Perform a bulk analysis of multivariate sensor data using the model you created in Task 3.
+ * Perform a bulk analysis of multivariate sensor data using the model you created in Task 2.
  * The data is located at https://multivariateuserstudy.blob.core.windows.net/anomalydetectordata/sensors.csv
  * The data is stored as comma-separated values in a single table, where each line
  * contains a timestamp and the values of the 5 sensor readings.
@@ -71,7 +73,7 @@ int? Task4(string modelId)
 
 #region TASK 5
 /*
- * Perform a bulk analysis of multivariate sensor data using the model you created in Task 3.
+ * Perform a bulk analysis of multivariate sensor data using the model you created in Task 2.
  * The data is located at https://multivariateuserstudy.blob.core.windows.net/anomalydetectordata/sensors2.csv
  * The data is stored as comma-separated values in a single table, where each line
  * contains a timestamp and the values of the 5 sensor readings.
